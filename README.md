@@ -13,11 +13,11 @@ The system implements a **Producer-Consumer** pattern using thread-safe queues t
 
 ```mermaid
 graph LR
-    A[IoT Sensor Simulation] -->|Telemetry Stream (10Hz)| B(Event Queue);
-    B -->|Ingest| C{LSTM Autoencoder};
-    C -->|Reconstruction| D[Dashboard Visualization];
-    C -->|Loss > 0.5| E[Anomaly Detector];
-    E -->|Alert| F[CSV Log & Snapshots];
+    A["IoT Sensor Simulation"] -->|"Telemetry Stream (10Hz)"| B("Event Queue");
+    B -->|"Ingest"| C{"LSTM Autoencoder"};
+    C -->|"Reconstruction"| D["Dashboard Visualization"];
+    C -->|"Loss > 0.5"| E["Anomaly Detector"];
+    E -->|"Alert"| F["CSV Log & Snapshots"];
     
     style C fill:#f9f,stroke:#333,stroke-width:2px
     style E fill:#bbf,stroke:#333,stroke-width:2px
